@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <h1>### Question 1: First and Last Name</h1>
+    <p>Create two variables: `firstName` and `lastName`. Store your first and last name in them and print your full name.</p>
+
+    <h1>### Question 2: Arithmetic Operations</h1>
+    <p>Create three variables: `num1`, `num2`, and `num3`. Perform the following operations using all three values:
+    - Addition
+    - Subtraction
+    - Multiplication
+    - Division
+
+    Display the result of each operation.</p>
+
+    <h1>### Question 3: Temperature Checker</h1>
+    <p>Take the temperature from the user.
+    - If the temperature is 0°C or below, print `"Freezing"`.
+    - Otherwise, print `"Not freezing"`.</p>
+
+    <h1>### Question 4: Age Category</h1>
+    <p>Take the user's age and display the appropriate category:
+    - 0–12: Child
+    - 13–19: Teenager
+    - 20–59: Adult
+    - 60 and above: Senior Citizen </p>
+
+    <h1>### Question 5: Electricity Bill Calculator</h1>
+    <p>Take the number of electricity units consumed and calculate the bill using these rates:
+    - First 100 units: Rs. 10 per unit
+    - Next 100 units: Rs. 15 per unit
+    - Above 200 units: Rs. 20 per unit
+
+    Calculate the bill using cumulative rates. For example, the first 100 units are charged at Rs. 10 each, and only the
+    units above 100 are charged at the next rate.</p>
+
+    <h1>### Question 6: Traffic Light</h1>
+    <p>Take a traffic light color as input.
+    - Red: `"Stop"`
+    - Yellow: `"Ready"`
+    - Green: `"Go"`
+    - Any other color: `"Invalid Color"`</p>
+
+    <h1>### Question 7: Pocket Money Checker</h1>
+    <p>Take the amount of pocket money.
+    - If it is greater than Rs. 500, print `"You can buy a gift"`.
+    - Otherwise, print `"Save your money"`.</p>
+
+    <h1>### Question 8: Free Delivery Checker</h1>
+    <p>Take the total shopping amount.
+    - If it is Rs. 2,000 or more, print `"Free Delivery"`.
+    - Otherwise, print `"Delivery Charges Apply"`.</p>
+
+    <h1>## Submission Instructions</h1>
+    <p>- Write JavaScript code for all 8 questions.
+    - Use variables and appropriate arithmetic operators.
+    - Use `if`, `else if`, and `else` where required.
+    - Take user input using `prompt()` where needed.
+    - Display the output using `console.log()`.</p>
+
+    <script>
+        let firstName = "John";
+        let lastName = "Doe";
+        console.log(firstName + " " + lastName);
+
+        let num1 = 10;
+        let num2 = 5;
+        let num3 = 2;
+        console.log(num1 + num2 + num3);
+        console.log(num1 - num2 - num3);
+        console.log(num1 * num2 * num3);
+        console.log(num1 / num2 / num3);
+
+        let temperature = parseFloat(prompt("Enter the temperature in °C:"));
+        if (temperature <= 0) {
+            console.log("Freezing");
+        } else {
+            console.log("Not freezing");
+        }
+
+        let age = parseInt(prompt("Enter your age:"));
+        if (age >= 0 && age <= 12) {
+            console.log("Child");
+        } else if (age >= 13 && age <= 19) {
+            console.log("Teenager");
+        } else if (age >= 20 && age <= 59) {
+            console.log("Adult");
+        } else if (age >= 60) {
+            console.log("Senior Citizen");
+        } else {
+            console.log("Invalid age");
+        }
+
+        let units = parseFloat(prompt("Enter the number of electricity units consumed:"));
+        let bill = 0;
+
+        if (units <= 100) {
+            bill = units * 10;
+        } else if (units <= 200) {
+            bill = 100 * 10 + (units - 100) * 15;
+        } else {
+            bill = 100 * 10 + 100 * 15 + (units - 200) * 20;
+        }
+
+        console.log(bill);
+
+        let trafficLight = prompt("Enter the traffic light color (Red, Yellow, Green):").toLowerCase();
+        if (trafficLight === "red") {
+            console.log("Stop");
+        } else if (trafficLight === "yellow") {
+            console.log("Ready");
+        } else if (trafficLight === "green") {
+            console.log("Go");
+        } else {
+            console.log("Invalid Color");
+        }
+
+        let pocketmoney = prompt("Enter the amount of pocket money:");
+        if (pocketmoney >= 500) {
+            console.log("You can buy a gift");
+        } else {
+            console.log("Save your money");
+        }
+
+        let shoppingAmount = prompt("Enter the total shopping amount:");
+        if (shoppingAmount >= 2000) {
+            console.log("Free Delivery");
+        } else {
+            console.log("Delivery Charges Apply");
+        }
+
+    </script>
+
+</body>
+
+</html>
